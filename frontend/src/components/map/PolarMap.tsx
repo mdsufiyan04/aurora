@@ -48,8 +48,7 @@ export function PolarMap() {
       },
       center: [50, -70], // Between Bharati and Maitri
       zoom: 2.5,
-      attributionControl: false,
-      navigationControl: false
+      attributionControl: false
     });
 
     map.current.on('load', () => {

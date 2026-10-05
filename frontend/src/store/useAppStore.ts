@@ -9,6 +9,7 @@ interface AppState {
   error: string | null;
   selectedRouteLabel: string | null;
   recentQueries: string[];
+  traceExpanded: boolean;
   
   setQuery: (q: string) => void;
   submitQuery: () => Promise<void>;
