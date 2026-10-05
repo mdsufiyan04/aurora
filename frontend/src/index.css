@@ -1,0 +1,47 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/jetbrains-mono/400.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    background-color: #0A121C;
+    color: #D8E1EC;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Kill default scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #1F3047; }
+}
+
+@layer components {
+  /* Panel style — flat, bordered, no shadow */
+  .panel {
+    @apply bg-bridge-base border border-bridge-border;
+  }
+  
+  .panel-header {
+    @apply px-3 py-2 border-b border-bridge-border 
+           text-[11px] font-medium tracking-wider uppercase 
+           text-bridge-dim;
+  }
+  
+  /* Monospace for all numbers */
+  .mono {
+    @apply font-mono tabular-nums;
+  }
+  
+  /* Status dot */
+  .status-dot {
+    @apply inline-block w-1.5 h-1.5 rounded-full;
+  }
+}
